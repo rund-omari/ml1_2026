@@ -5,7 +5,7 @@ Created on Sun Feb  1 12:53:31 2026
 @author: SDK
 """
 import streamlit as st 
-from sklearn.datasets import load_breast_cancer
+import  sklearn
 import joblib
 import numpy as np
 import pandas as pd 
@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 st.title("Breast Cancer Prediction")
 #%%
 # Load Data
-data = load_breast_cancer()
+data = sklearn.datasets.load_breast_cancer()
 X = pd.DataFrame(data.data, columns=data.feature_names)
 y = data.target
 
@@ -84,3 +84,4 @@ for page , model  in [(svm_model , svm) , (lr_model,lr) , (dt_model,dt)] :
     
     
     
+
