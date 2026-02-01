@@ -1,4 +1,4 @@
-sklearn
+sklearn.datasets
 joblib
 numpy
 pandas
