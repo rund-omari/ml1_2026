@@ -3,13 +3,13 @@ import numpy as np
 import joblib
 import pandas as pd
 import matplotlib.pyplot as plt
-from sklearn.datasets import load_breast_cancer
+import sklearn 
 
 st.title("Breast Cancer Prediction")
 
 #%%
 # Load Data
-data = load_breast_cancer()
+data = sklearn.datasets.load_breast_cancer()
 X = pd.DataFrame(data.data, columns=data.feature_names)
 y = data.target
 
